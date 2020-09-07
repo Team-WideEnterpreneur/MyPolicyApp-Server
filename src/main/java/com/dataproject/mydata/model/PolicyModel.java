@@ -7,48 +7,54 @@ import javax.persistence.*;
 import javax.xml.bind.annotation.XmlElement;
 
 @Entity
-@Table
+@Table(name="policy")
 @Getter
 @Setter
 public class PolicyModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private long poliId;
 
-    @Column
-    private String polyId;
+    @Column(columnDefinition = "varchar(255) default '0'")
+    private String poliName;
 
-    @Column
-    private String polySriNum;
+    @Column(columnDefinition = "varchar(255) default '0'")
+    private String busiType;
 
-    @Column
-    private String polyOrg;
+    @Column(columnDefinition = "varchar(255) default '0'")
+    private String wrkStat;
 
-    @Column
-    private String polyName;
+    @Column(columnDefinition = "varchar(255) default '0'")
+    private String grade;
 
-    @Column
-    private String polyItcn;
+    @Column(columnDefinition = "varchar(255) default '0'")
+    private String credit;
 
-    @Column
-    private String polyType;
+    @Column(columnDefinition = "varchar(255) default '0'")
+    private String tenure;
 
-    @Column
-    private String sporScl;
+    @Column(columnDefinition = "varchar(255) default '0'")
+    private String wrkScl;
 
-    @Column
-    private String sporCont;
+    @Column(columnDefinition = "varchar(255) default '0'")
+    private String usrStat;
 
-    @Column
-    private String parAge;
+    @Column(columnDefinition = "varchar(255) default '0'")
+    private String minAge;
 
-    @Column
-    private String parEmp;
+    @Column(columnDefinition = "varchar(255) default '0'")
+    private String maxAge;
 
-    @Column
-    private String parMaj;
+    @Column(columnDefinition = "varchar(255) default '0'")
+    private String startDay;
 
-    @Column
-    private String parSpec;
+    @Column(columnDefinition = "varchar(255) default '0'")
+    private String endDay;
+
+    //@Column(columnDefinition = "varchar(255) default '0'")
+    //private String incomQui;
+
+    @Column(columnDefinition = "varchar(255) default '0'")
+    private String poliUrl;
 
 }

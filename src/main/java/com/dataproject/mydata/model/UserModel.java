@@ -6,18 +6,42 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Table
+@Table(name="user")
 @Getter
 @Setter
 public class UserModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private long userId;
 
-    @Column
+    @Column(columnDefinition = "varchar(255) default '0'")
     private String name;
 
-    @Column
+    @Column(columnDefinition = "varchar(255) default '0'")
     private String birthDate;
+
+    @Column(columnDefinition = "varchar(255) default '0'")
+    private String gender;
+
+    @Column(columnDefinition = "varchar(255) default '0'")
+    private String address;
+
+    @Column(columnDefinition = "varchar(255) default '0'")
+    private String wrkStat;
+
+    @Column(columnDefinition = "varchar(255) default '0'")
+    private String usrStat;
+
+    @Column(columnDefinition = "varchar(255) default '0'")
+    private String hlthInsu;
+
+    @Column(columnDefinition = "varchar(255) default '0'")
+    private String income;
+
+    @Column(columnDefinition = "varchar(255) default '0'")
+    private String isMoTh;
+
+    @Column(columnDefinition = "varchar(255) default '0'")
+    private String isLowIn;
 
 }
