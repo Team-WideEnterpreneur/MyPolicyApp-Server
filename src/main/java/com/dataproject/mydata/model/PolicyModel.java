@@ -1,6 +1,8 @@
 package com.dataproject.mydata.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -10,6 +12,8 @@ import javax.xml.bind.annotation.XmlElement;
 @Table(name="policy")
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class PolicyModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -1,6 +1,8 @@
 package com.dataproject.mydata.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -9,6 +11,8 @@ import javax.persistence.*;
 @Table(name="application")
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class ApplicationModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
