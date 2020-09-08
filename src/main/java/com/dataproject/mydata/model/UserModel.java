@@ -12,6 +12,7 @@ import javax.persistence.*;
 public class UserModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column
     private long userId;
 
     @Column(columnDefinition = "varchar(255) default '0'")

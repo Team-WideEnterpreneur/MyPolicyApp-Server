@@ -12,6 +12,7 @@ import javax.persistence.*;
 public class ApplicationModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column
     private long applyId;
 
     @Column

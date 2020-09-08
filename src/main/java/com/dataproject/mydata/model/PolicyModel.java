@@ -13,6 +13,7 @@ import javax.xml.bind.annotation.XmlElement;
 public class PolicyModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column
     private long poliId;
 
     @Column(columnDefinition = "varchar(255) default '0'")
