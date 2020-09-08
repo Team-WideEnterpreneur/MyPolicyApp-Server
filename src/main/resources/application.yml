@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/mydata?serverTimezone=UTC&characterEncoding=UTF-8
-    username: root
-    password: root
+    url: jdbc:mysql://mydata-db.mysql.database.azure.com:3306/mydata?serverTimezone=UTC&characterEncoding=UTF-8
+    username: mydata_user@mydata-db
+    password: policy2020!
   jpa:
     show-sql: true
     hibernate:
