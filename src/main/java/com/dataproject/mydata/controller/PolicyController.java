@@ -62,8 +62,14 @@ public class PolicyController {
     }
 
     @GetMapping("/policy/all")
-    public List<PolicySummaryModel> getAllPolicy(){
-        log.debug("get all policy name");
+    public List<PolicyModel> getAllPolicy(){
+        log.debug("get all policy ");
+        return policyService.getAllPolicy();
+    }
+
+    @GetMapping("/policy/summary")
+    public List<PolicySummaryModel> getAllPolicySummary(){
+        log.debug("get all policy summary");
         return policyService.getAllPolicySummary();
     }
 

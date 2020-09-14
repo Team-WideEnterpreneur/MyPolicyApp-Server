@@ -29,4 +29,8 @@ public class PolicyService {
     public void createPolicy(PolicyModel policyModel) {
         policyRepository.save(policyModel);
     }
+
+    public List<PolicyModel> getAllPolicy() {
+        return policyRepository.findAll();
+    }
 }
