@@ -3,6 +3,7 @@ package com.dataproject.mydata.controller;
 import com.dataproject.mydata.model.InputPolicyModel;
 
 import com.dataproject.mydata.model.PolicyModel;
+import com.dataproject.mydata.model.output.PolicySummaryModel;
 import com.dataproject.mydata.service.PolicyService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.client.HttpClient;
@@ -61,9 +62,9 @@ public class PolicyController {
     }
 
     @GetMapping("/policy/all")
-    public List<String> getAllPolicy(){
+    public List<PolicySummaryModel> getAllPolicy(){
         log.debug("get all policy name");
-        return policyService.getAllPolicyName();
+        return policyService.getAllPolicySummary();
     }
 
     @PostMapping("/policy")

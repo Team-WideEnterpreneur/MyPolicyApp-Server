@@ -1,6 +1,7 @@
 package com.dataproject.mydata.service;
 
 import com.dataproject.mydata.model.PolicyModel;
+import com.dataproject.mydata.model.output.PolicySummaryModel;
 import com.dataproject.mydata.repository.PolicyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,11 +19,11 @@ public class PolicyService {
         return policyModel;
     }
 
-    public List<String> getAllPolicyName() {
+    public List<PolicySummaryModel> getAllPolicySummary() {
         List<PolicyModel> policyModels=policyRepository.findAll();
-        List<String> policyNames=policyModels.stream().map(policyModel
-                ->{return policyModel.getPoliName();}).collect(Collectors.toList());
-        return policyNames;
+        List<PolicySummaryModel> policySummaryModels=policyModels.stream().map(policyModel
+                ->{return new PolicySummaryModel(policyModel.getPoliId(),policyModel.getPoliName(),policyModel.getBusiType());}).collect(Collectors.toList());
+        return policySummaryModels;
     }
 
     public void createPolicy(PolicyModel policyModel) {
